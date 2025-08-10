@@ -12,3 +12,4 @@
 /Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/obj/Debug/net9.0/RemoteEmuApp.pdb
 /Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/obj/Debug/net9.0/RemoteEmuApp.genruntimeconfig.cache
 /Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/obj/Debug/net9.0/ref/RemoteEmuApp.dll
+/Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/obj/Debug/net9.0/RemoteEmuApp.sourcelink.json

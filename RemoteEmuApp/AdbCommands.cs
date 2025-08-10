@@ -8,11 +8,14 @@ namespace RemoteEmuApp
     public class AdbCommands
     {
         private readonly string _adbPath;
+        private const string ANDROID_SDK_PATH = "/Users/pasindujayawardana/Library/Android/sdk";
+        private const string ADB_RELATIVE_PATH = "platform-tools/adb";
 
-        public AdbCommands(string adbPath = "adb")
+        public AdbCommands(string? customAdbPath = null)
         {
-            _adbPath = adbPath;
+            _adbPath = customAdbPath ?? Path.Combine(ANDROID_SDK_PATH, ADB_RELATIVE_PATH);
         }
+
 
         /// <summary>
         /// Executes an ADB command and returns the output
@@ -33,10 +36,10 @@ namespace RemoteEmuApp
                     process.StartInfo.CreateNoWindow = true;
 
                     process.Start();
-                    
+
                     string output = await process.StandardOutput.ReadToEndAsync();
                     string error = await process.StandardError.ReadToEndAsync();
-                    
+
                     await process.WaitForExitAsync();
 
                     if (process.ExitCode != 0)
@@ -81,7 +84,7 @@ namespace RemoteEmuApp
                 process.StartInfo.CreateNoWindow = false;
 
                 process.Start();
-                
+
                 // Don't wait for emulator to fully start as it's a long-running process
                 return Task.FromResult($"Emulator '{avdName}' started successfully");
             }
@@ -109,7 +112,7 @@ namespace RemoteEmuApp
                     process.StartInfo.CreateNoWindow = true;
 
                     process.Start();
-                    
+
                     string output = await process.StandardOutput.ReadToEndAsync();
                     await process.WaitForExitAsync();
 
@@ -153,8 +156,8 @@ namespace RemoteEmuApp
                 throw new FileNotFoundException($"APK file not found: {apkPath}");
             }
 
-            string arguments = string.IsNullOrEmpty(deviceId) 
-                ? $"install \"{apkPath}\"" 
+            string arguments = string.IsNullOrEmpty(deviceId)
+                ? $"install \"{apkPath}\""
                 : $"-s {deviceId} install \"{apkPath}\"";
 
             return await ExecuteAdbCommand(arguments);
@@ -167,8 +170,8 @@ namespace RemoteEmuApp
         /// <returns>Device information</returns>
         public async Task<string> GetDeviceInfo(string? deviceId = null)
         {
-            string arguments = string.IsNullOrEmpty(deviceId) 
-                ? "shell getprop" 
+            string arguments = string.IsNullOrEmpty(deviceId)
+                ? "shell getprop"
                 : $"-s {deviceId} shell getprop";
 
             return await ExecuteAdbCommand(arguments);
@@ -181,8 +184,8 @@ namespace RemoteEmuApp
         /// <returns>Command output</returns>
         public async Task<string> RebootDevice(string? deviceId = null)
         {
-            string arguments = string.IsNullOrEmpty(deviceId) 
-                ? "reboot" 
+            string arguments = string.IsNullOrEmpty(deviceId)
+                ? "reboot"
                 : $"-s {deviceId} reboot";
 
             return await ExecuteAdbCommand(arguments);
@@ -197,17 +200,17 @@ namespace RemoteEmuApp
         public async Task<string> TakeScreenshot(string outputPath, string? deviceId = null)
         {
             string tempPath = "/sdcard/screenshot.png";
-            
+
             // Take screenshot on device
-            string screenshotArgs = string.IsNullOrEmpty(deviceId) 
-                ? $"shell screencap -p {tempPath}" 
+            string screenshotArgs = string.IsNullOrEmpty(deviceId)
+                ? $"shell screencap -p {tempPath}"
                 : $"-s {deviceId} shell screencap -p {tempPath}";
-            
+
             await ExecuteAdbCommand(screenshotArgs);
 
             // Pull screenshot to local machine
-            string pullArgs = string.IsNullOrEmpty(deviceId) 
-                ? $"pull {tempPath} \"{outputPath}\"" 
+            string pullArgs = string.IsNullOrEmpty(deviceId)
+                ? $"pull {tempPath} \"{outputPath}\""
                 : $"-s {deviceId} pull {tempPath} \"{outputPath}\"";
 
             return await ExecuteAdbCommand(pullArgs);

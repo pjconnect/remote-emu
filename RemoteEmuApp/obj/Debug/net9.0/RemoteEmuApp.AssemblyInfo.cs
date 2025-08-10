@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RemoteEmuApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a99d87128651cdc31cc3fa572b0c2160a2c478a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("RemoteEmuApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RemoteEmuApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
