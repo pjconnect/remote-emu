@@ -1,0 +1,14 @@
+/Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/bin/Debug/net9.0/RemoteEmuApp
+/Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/bin/Debug/net9.0/RemoteEmuApp.deps.json
+/Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/bin/Debug/net9.0/RemoteEmuApp.runtimeconfig.json
+/Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/bin/Debug/net9.0/RemoteEmuApp.dll
+/Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/bin/Debug/net9.0/RemoteEmuApp.pdb
+/Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/obj/Debug/net9.0/RemoteEmuApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/obj/Debug/net9.0/RemoteEmuApp.AssemblyInfoInputs.cache
+/Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/obj/Debug/net9.0/RemoteEmuApp.AssemblyInfo.cs
+/Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/obj/Debug/net9.0/RemoteEmuApp.csproj.CoreCompileInputs.cache
+/Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/obj/Debug/net9.0/RemoteEmuApp.dll
+/Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/obj/Debug/net9.0/refint/RemoteEmuApp.dll
+/Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/obj/Debug/net9.0/RemoteEmuApp.pdb
+/Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/obj/Debug/net9.0/RemoteEmuApp.genruntimeconfig.cache
+/Users/pasindujayawardana/Documents/GitHub/remote-emu/RemoteEmuApp/obj/Debug/net9.0/ref/RemoteEmuApp.dll
